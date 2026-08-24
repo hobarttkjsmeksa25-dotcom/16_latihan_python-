@@ -1,10 +1,17 @@
 """
-Program Menghitung Luas Persegi Panjang
+Program Menghitung Luas Persegi Panjang dengan perulangan
 """
 
-panjang = float(input("Masukkan panjang: "))
-lebar = float(input("Masukkan lebar: "))
+while True:
+    angka = int(input("Masukkan sebuah angka: "))
 
-luas = panjang * lebar
+    if angka % 2 == 0:
+        print(f"{angka} adalah bilangan GENAP")
+    else:
+        print(f"{angka} adalah bilangan GANJIL")
 
-print(f"Luas persegi panjang dengan panjang {panjang} dan lebar {lebar} adalah {luas}")
+    ulang = input("\nMau coba lagi? (y/n): ")
+
+    if ulang.lower() == "n":
+        print("Program selesai. Terima kasih!")
+        break
