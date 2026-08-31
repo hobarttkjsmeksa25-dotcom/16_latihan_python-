@@ -1,9 +1,6 @@
-import os
-print(os.system("cls"))
-
-print("<============ Program untuk menentukan GANJIL/GENAP ============>")
 
 def ganjil_genap():
+    print("<============ Program untuk menentukan GANJIL/GENAP ============>")
     while True:
         angka = int(input("Masukkan bilangan yang akan diperiksa: "))
         
@@ -42,9 +39,3 @@ def cek_prima():
         if input("\nApakah ingin memeriksa bilangan lain? (Y/N): ").upper() == "N":
             print("Terima kasih telah menggunakan program ini.")
             break
-
-
-cek_prima()
-
-
-ganjil_genap()
