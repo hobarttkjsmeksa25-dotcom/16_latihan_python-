@@ -1,19 +1,50 @@
-"""
-Program Menghitung Luas Persegi Panjang dengan perulangan
-"""
+import os
+print(os.system("cls"))
 
-while True:
-    angka = int(input("Masukkan sebuah angka: "))
+print("<============ Program untuk menentukan GANJIL/GENAP ============>")
 
-    if angka % 2 == 0:
-        print(f"{angka} adalah bilangan GENAP")
-    else:
-        print(f"{angka} adalah bilangan GANJIL")
+def ganjil_genap():
+    while True:
+        angka = int(input("Masukkan bilangan yang akan diperiksa: "))
+        
+        if angka % 2 == 0:
+            print(angka, "adalah bilangan genap 🟢")
+        else:
+            print(angka, "adalah bilangan ganjil 🔴")
+            
+        if input("\nApakah ingin memeriksa bilangan lain? (Y/N):").upper() == "N":
+            print("Terima kasih telah menggunakan program ini.")
+            print("================================================================")
+            break
+        else:
+            continue
 
-    ulang = input("\nMau coba lagi? (y/n): ")
 
-    if ulang.lower() == "n":
-        print("Program selesai. Terima kasih!")
-        break
+def cek_prima():
+    while True:
+        angka = int(input("Masukkan bilangan yang akan diperiksa: "))
+
+        if angka < 2:
+            print(angka, "bukan bilangan prima")
+        else:
+            prima = True
+
+            for pembagi in range(2, int(angka ** 0.5) + 1):
+                if angka % pembagi == 0:
+                    prima = False
+                    break
+
+            if prima:
+                print(angka, "adalah bilangan prima")
+            else:
+                print(angka, "bukan bilangan prima")
+
+        if input("\nApakah ingin memeriksa bilangan lain? (Y/N): ").upper() == "N":
+            print("Terima kasih telah menggunakan program ini.")
+            break
 
 
+cek_prima()
+
+
+ganjil_genap()
